@@ -6,8 +6,8 @@ require "peatio/infura/version"
 Gem::Specification.new do |spec|
   spec.name          = "peatio-infura"
   spec.version       = Peatio::Infura::VERSION
-  spec.authors       = ["Maksym N."]
-  spec.email         = ["mnaichuk@heliostech.fr"]
+  spec.authors       = ["Martian At Work"]
+  spec.email         = ["noreply@demo.com"]
 
   spec.summary       = %q{Gem for extending Peatio plugable system with Infura implementation.}
   spec.description   = %q{Infura Peatio gem which implements Peatio::Blockchain::Abstract & Peatio::Wallet::Abstract.}
