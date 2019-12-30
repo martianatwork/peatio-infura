@@ -54,7 +54,7 @@ module Peatio
         @connection ||= Faraday.new(@json_rpc_endpoint) do |f|
           f.adapter :net_http_persistent, pool_size: 5, idle_timeout: @idle_timeout
         end.tap do |connection|
-          connection.response :logger
+          # connection.response :logger
           unless @json_rpc_endpoint.user.blank?
             connection.basic_auth(@json_rpc_endpoint.user, @json_rpc_endpoint.password)
           end
