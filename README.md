@@ -26,7 +26,7 @@ For Peatio Infura plugin integration you need to do the following steps:
 
 1. Add peatio-infura gem into your Gemfile.plugin
 ```ruby
-gem 'peatio-infura', '~> 0.2.0'
+gem 'peatio-infura', '~> 0.1.1'
 ```
 
 2. Run `bundle install` for updating Gemfile.lock
@@ -51,7 +51,7 @@ gem 'peatio-infura', '~> 0.2.0'
 
 ## Development
 
-Plugin development [example](https://github.com/rubykube/peatio/blob/master/docs/coins/development.md).
+Plugin development [example](https://github.com/openware/peatio/blob/master/docs/coins/development.md).
 
 ## Contributing
 
