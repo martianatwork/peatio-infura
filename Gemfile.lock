@@ -6,7 +6,7 @@ PATH
       better-faraday (~> 1.0.5)
       faraday (~> 0.15.4)
       memoist (~> 0.16.0)
-      net-http-persistent (~> 3.1)
+      net-http-persistent (>= 3.0)
       peatio (~> 0.6.1)
 
 GEM
