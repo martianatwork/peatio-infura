@@ -66,6 +66,14 @@ module Peatio
         raise Peatio::Blockchain::ClientError, e
       end
 
+      def fetch_raw_tx(tx_id)
+        client.json_rpc(:eth_getTransactionByHash, [tx_id])
+      end
+
+      def fetch_raw_tx_receipt(tx_id)
+        client.json_rpc(:eth_getTransactionReceipt, [tx_id])
+      end
+
       def load_balance_of_address!(address, currency_id)
         currency = settings[:currencies].find { |c| c[:id] == currency_id.to_s }
         raise UndefinedCurrencyError unless currency
