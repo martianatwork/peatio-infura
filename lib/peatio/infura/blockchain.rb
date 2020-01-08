@@ -74,6 +74,16 @@ module Peatio
         client.json_rpc(:eth_getTransactionReceipt, [tx_id])
       end
 
+      def fetch_raw_tx_receipt_with_tx(tx_id)
+        tx = client.json_rpc(:eth_getTransactionReceipt, [tx_id])
+        return if tx.nil? || tx.fetch('to').blank?
+        txs = build_transactions(tx).map do |ntx|
+          Peatio::Transaction.new(ntx)
+          # ltx.assign_attributes(from_address: normalize_address(tx['from']))
+        end
+        txs unless txs.nil?
+      end
+
       def load_balance_of_address!(address, currency_id)
         currency = settings[:currencies].find { |c| c[:id] == currency_id.to_s }
         raise UndefinedCurrencyError unless currency
