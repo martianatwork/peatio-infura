@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    peatio-infura (0.1.4)
+    peatio-infura (0.1.5)
       activesupport (~> 5.2.3)
       better-faraday (~> 1.0.5)
       faraday (~> 0.15.4)
@@ -46,7 +46,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     hashdiff (0.3.9)
     http_parser.rb (0.6.0)
-    i18n (1.7.0)
+    i18n (1.7.1)
       concurrent-ruby (~> 1.0)
     jwt (2.2.1)
     memoist (0.16.2)
